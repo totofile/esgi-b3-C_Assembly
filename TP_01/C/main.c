@@ -25,10 +25,10 @@ int main(int argc, char *argv[]) {
             printf("Enter the id of the user you want to edit: ");
             int id;
             scanf("%d", &id);
-            int value_to_edit = 0;
             printf("What do you want to edit ?\n1: ID\n2: nickname\n3: Is_Admin\n");
+            int value_to_edit = -1;
             scanf("%d", &value_to_edit);
-            users_tab = edit_user(users_tab, id, value_to_edit); //modifier pour recup le tableau complet
+            edit_user(users_tab, id, value_to_edit); //modifier pour recup le tableau complet
             break;
         case 4:
             printf("Bye bye !\n");

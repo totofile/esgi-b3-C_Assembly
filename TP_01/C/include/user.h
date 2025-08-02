@@ -14,7 +14,7 @@
 
     user_s create_user(void);
     void print_users(user_s *users);
-    user_s *edit_user(user_s *users, int id, int value);
+    void edit_user(user_s users[], int id, int value);
 #endif
 
 

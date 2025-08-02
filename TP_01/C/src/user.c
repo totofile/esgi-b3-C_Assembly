@@ -40,28 +40,32 @@ void print_users(user_s *users)
     }
 }
 
-user_s* edit_user(user_s users[], int id, int value) // modifier pour corriger cette erreur car je ne renvoie pas le bon truc je dois recup le tab complet
+void edit_user(user_s users[], int id, int value) // modifier pour corriger cette erreur car je ne renvoie pas le bon truc je dois recup le tab complet
 {
     user_s user;
     for (int i = 0; i < MAX_USERS; i++) {
         if (users[i].id == id) {
             user = users[i];
+        
+    
+            switch (value)
+            {
+            case 1:
+                printf("Enter a new ID: ");
+                scanf("%d", &user.id);
+                break;
+            case 2:
+                printf("Enter a new pseudo: ");
+                scanf("%s", user.pseudo);
+                break;
+            case 3:
+                user.isAdmin = admin_check();
+                break;
+            default:
+                break;
+            }
+            users[i] = user;
+            break;
         }
-    }
-    switch (value)
-    {
-    case 0:
-        printf("Enter a new ID: ");
-        scanf("%d", &user.id);
-        break;
-    case 1:
-        printf("Enter a new pseudo: ");
-        scanf("%s", user.pseudo);
-        break;
-    case 2:
-        user.isAdmin = admin_check();
-        break;
-    default:
-        break;
     }
 }
