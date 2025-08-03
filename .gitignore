@@ -1,1 +1,29 @@
-TP - Révisions C et assembleur.pdf
+# PDF de cours (trop volumineux pour le repo)
+*.pdf
+
+# Fichiers binaires compilés
+*.o
+*.out
+a.out
+
+# Binaires exécutables (sauf ceux du TP)
+multiply_registers
+multiply_stack
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*~
+
+# Fichiers de debug/test temporaires
+test_shell.py
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers d'IDE
+.vscode/
+.idea/
+*.sublime-*
